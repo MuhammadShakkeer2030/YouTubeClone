@@ -1,0 +1,15 @@
+version: '3.9' # file syntax version , 3.9 is commonly used in
+
+services:
+  react-app-1:
+    image: youtubeclone-react-app
+    build: .
+    environment:
+      - CHOKIDAR_USEPOLLING=true 
+    ports:
+      - "3000:3000"
+    volumes:
+      - ${PWD:-.}:/app
+    
+
+

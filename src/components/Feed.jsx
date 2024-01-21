@@ -2,7 +2,7 @@ import { wait } from "@testing-library/user-event/dist/utils";
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { SideBar, Videos, LoadingSkeleton } from "./index";
-import { VideosLoading} from './CustomizeLoadingVideos'
+import { VideosLoading } from "./CustomizeLoadingVideos";
 import { fetchFromApi } from "../utilty/FetchFromApi";
 
 function Feed() {
@@ -46,8 +46,15 @@ function Feed() {
         {loading ? (
           // <LoadingSkeleton width="340px" height="12rem" hideItem={true} loadingCardMaping = {[1,2,3,4,5,6,7,8]} />
 
-          <VideosLoading  width="340px" height="12rem" hideItem={true} loadingCardMaping = {[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20]}  />
-
+          <VideosLoading
+            width="340px"
+            height="12rem"
+            hideItem={true}
+            loadingCardMaping={[
+              1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19,
+              20,
+            ]}
+          />
         ) : (
           <Videos videos={data} />
         )}

@@ -45,7 +45,7 @@ function SearchBar() {
           showMubileSearch ? "block " : "hidden"
         }w-full md:block search-bar pl-2 text-black`}
         type="text"
-        placeholder="click here or / to Search..."
+        placeholder="Hi Please Search..."
         value={searchTerm}
         onClick={(e) => {
           setshowRecentSearch(true);
@@ -65,7 +65,7 @@ function SearchBar() {
       {/* displaying recent searches */}
       {showRecentSearch && (
         <div className="absolute z-10 bg-black top-10 right-0 left-0 max-h-[300px] h-auto rounded-2xl overflow-y-scroll">
-         {Array.from(recentSearch).map((item,index,array)=> <li>{b}</li> )}
+         {Array.from(recentSearch).map((item,index,array)=> <li>{item}</li> )}
         </div>
       )}
     </form>

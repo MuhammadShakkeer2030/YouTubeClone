@@ -11,6 +11,7 @@ function App() {
     <BrowserRouter>
       <div className="bg-[#000] px-100px">
         <Navbar />
+        <h2>Shakkeer</h2>
         
         <Routes>
           <Route path="/" element={<Feed />} />
